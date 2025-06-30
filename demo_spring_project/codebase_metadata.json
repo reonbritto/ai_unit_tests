@@ -1,0 +1,1506 @@
+{
+  "project_info": {
+    "name": "demo_spring_project",
+    "path": "C:\\Users\\ReonBritto\\Desktop\\AI\\new_unit_tests\\demo_spring_project",
+    "has_maven": true,
+    "has_gradle": false,
+    "source_dirs": [
+      "C:\\Users\\ReonBritto\\Desktop\\AI\\new_unit_tests\\demo_spring_project\\src\\main\\java"
+    ],
+    "test_dirs": [
+      "C:\\Users\\ReonBritto\\Desktop\\AI\\new_unit_tests\\demo_spring_project\\src\\test\\java"
+    ]
+  },
+  "classes": [
+    {
+      "name": "DemoApplication",
+      "package": "com.demo",
+      "full_name": "com.demo.DemoApplication",
+      "annotations": [
+        "SpringBootApplication"
+      ],
+      "modifiers": [
+        "public"
+      ],
+      "extends": null,
+      "implements": [],
+      "methods": [
+        {
+          "name": "main",
+          "return_type": "void",
+          "parameters": [
+            {
+              "name": "args",
+              "type": "String"
+            }
+          ],
+          "annotations": [],
+          "modifiers": [
+            "public",
+            "static"
+          ],
+          "is_static": true,
+          "is_constructor": false,
+          "exceptions": []
+        }
+      ],
+      "fields": [],
+      "is_interface": false,
+      "is_enum": false,
+      "is_abstract": false,
+      "dependencies": [
+        "org.springframework.boot.SpringApplication",
+        "org.springframework.boot.autoconfigure.SpringBootApplication"
+      ],
+      "file_path": "src\\main\\java\\com\\demo\\DemoApplication.java"
+    },
+    {
+      "name": "UserController",
+      "package": "com.demo.controller",
+      "full_name": "com.demo.controller.UserController",
+      "annotations": [
+        "RestController",
+        "RequestMapping"
+      ],
+      "modifiers": [
+        "public"
+      ],
+      "extends": null,
+      "implements": [],
+      "methods": [
+        {
+          "name": "createUser",
+          "return_type": "ResponseEntity",
+          "parameters": [
+            {
+              "name": "user",
+              "type": "User"
+            }
+          ],
+          "annotations": [
+            "PostMapping"
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "getUserById",
+          "return_type": "ResponseEntity",
+          "parameters": [
+            {
+              "name": "id",
+              "type": "Long"
+            }
+          ],
+          "annotations": [
+            "GetMapping"
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "getAllUsers",
+          "return_type": "ResponseEntity",
+          "parameters": [],
+          "annotations": [
+            "GetMapping"
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "getAdults",
+          "return_type": "ResponseEntity",
+          "parameters": [],
+          "annotations": [
+            "GetMapping"
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "searchUsers",
+          "return_type": "ResponseEntity",
+          "parameters": [
+            {
+              "name": "name",
+              "type": "String"
+            }
+          ],
+          "annotations": [
+            "GetMapping"
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "updateUser",
+          "return_type": "ResponseEntity",
+          "parameters": [
+            {
+              "name": "id",
+              "type": "Long"
+            },
+            {
+              "name": "userDetails",
+              "type": "User"
+            }
+          ],
+          "annotations": [
+            "PutMapping"
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "deleteUser",
+          "return_type": "ResponseEntity",
+          "parameters": [
+            {
+              "name": "id",
+              "type": "Long"
+            }
+          ],
+          "annotations": [
+            "DeleteMapping"
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        }
+      ],
+      "fields": [
+        {
+          "name": "userService",
+          "type": "UserService",
+          "annotations": [
+            "Autowired"
+          ],
+          "modifiers": [
+            "private"
+          ],
+          "is_static": false
+        }
+      ],
+      "is_interface": false,
+      "is_enum": false,
+      "is_abstract": false,
+      "dependencies": [
+        "com.demo.entity.User",
+        "com.demo.service.UserService",
+        "org.springframework.beans.factory.annotation.Autowired",
+        "org.springframework.http.HttpStatus",
+        "org.springframework.http.ResponseEntity",
+        "org.springframework.web.bind.annotation",
+        "java.util.List",
+        "java.util.Optional"
+      ],
+      "file_path": "src\\main\\java\\com\\demo\\controller\\UserController.java"
+    },
+    {
+      "name": "User",
+      "package": "com.demo.entity",
+      "full_name": "com.demo.entity.User",
+      "annotations": [
+        "Entity",
+        "Table"
+      ],
+      "modifiers": [
+        "public"
+      ],
+      "extends": null,
+      "implements": [],
+      "methods": [
+        {
+          "name": "User",
+          "return_type": "User",
+          "parameters": [],
+          "annotations": [],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": true,
+          "exceptions": []
+        },
+        {
+          "name": "User",
+          "return_type": "User",
+          "parameters": [
+            {
+              "name": "name",
+              "type": "String"
+            },
+            {
+              "name": "email",
+              "type": "String"
+            },
+            {
+              "name": "age",
+              "type": "Integer"
+            }
+          ],
+          "annotations": [],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": true,
+          "exceptions": []
+        },
+        {
+          "name": "getId",
+          "return_type": "Long",
+          "parameters": [],
+          "annotations": [],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "setId",
+          "return_type": "void",
+          "parameters": [
+            {
+              "name": "id",
+              "type": "Long"
+            }
+          ],
+          "annotations": [],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "getName",
+          "return_type": "String",
+          "parameters": [],
+          "annotations": [],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "setName",
+          "return_type": "void",
+          "parameters": [
+            {
+              "name": "name",
+              "type": "String"
+            }
+          ],
+          "annotations": [],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "getEmail",
+          "return_type": "String",
+          "parameters": [],
+          "annotations": [],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "setEmail",
+          "return_type": "void",
+          "parameters": [
+            {
+              "name": "email",
+              "type": "String"
+            }
+          ],
+          "annotations": [],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "getAge",
+          "return_type": "Integer",
+          "parameters": [],
+          "annotations": [],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "setAge",
+          "return_type": "void",
+          "parameters": [
+            {
+              "name": "age",
+              "type": "Integer"
+            }
+          ],
+          "annotations": [],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        }
+      ],
+      "fields": [
+        {
+          "name": "id",
+          "type": "Long",
+          "annotations": [
+            "Id",
+            "GeneratedValue"
+          ],
+          "modifiers": [
+            "private"
+          ],
+          "is_static": false
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "annotations": [
+            "Column"
+          ],
+          "modifiers": [
+            "private"
+          ],
+          "is_static": false
+        },
+        {
+          "name": "email",
+          "type": "String",
+          "annotations": [
+            "Column"
+          ],
+          "modifiers": [
+            "private"
+          ],
+          "is_static": false
+        },
+        {
+          "name": "age",
+          "type": "Integer",
+          "annotations": [],
+          "modifiers": [
+            "private"
+          ],
+          "is_static": false
+        }
+      ],
+      "is_interface": false,
+      "is_enum": false,
+      "is_abstract": false,
+      "dependencies": [
+        "javax.persistence"
+      ],
+      "file_path": "src\\main\\java\\com\\demo\\entity\\User.java"
+    },
+    {
+      "name": "UserRepository",
+      "package": "com.demo.repository",
+      "full_name": "com.demo.repository.UserRepository",
+      "annotations": [
+        "Repository"
+      ],
+      "modifiers": [
+        "public"
+      ],
+      "extends": null,
+      "implements": [
+        "JpaRepository"
+      ],
+      "methods": [
+        {
+          "name": "findByEmail",
+          "return_type": "Optional",
+          "parameters": [
+            {
+              "name": "email",
+              "type": "String"
+            }
+          ],
+          "annotations": [],
+          "modifiers": [],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "findByAgeGreaterThan",
+          "return_type": "List",
+          "parameters": [
+            {
+              "name": "age",
+              "type": "Integer"
+            }
+          ],
+          "annotations": [],
+          "modifiers": [],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "findByNameContaining",
+          "return_type": "List",
+          "parameters": [
+            {
+              "name": "name",
+              "type": "String"
+            }
+          ],
+          "annotations": [
+            "Query"
+          ],
+          "modifiers": [],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "existsByEmail",
+          "return_type": "boolean",
+          "parameters": [
+            {
+              "name": "email",
+              "type": "String"
+            }
+          ],
+          "annotations": [],
+          "modifiers": [],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        }
+      ],
+      "fields": [],
+      "is_interface": true,
+      "is_enum": false,
+      "is_abstract": true,
+      "dependencies": [
+        "com.demo.entity.User",
+        "org.springframework.data.jpa.repository.JpaRepository",
+        "org.springframework.data.jpa.repository.Query",
+        "org.springframework.data.repository.query.Param",
+        "org.springframework.stereotype.Repository",
+        "java.util.List",
+        "java.util.Optional"
+      ],
+      "file_path": "src\\main\\java\\com\\demo\\repository\\UserRepository.java"
+    },
+    {
+      "name": "UserService",
+      "package": "com.demo.service",
+      "full_name": "com.demo.service.UserService",
+      "annotations": [
+        "Service"
+      ],
+      "modifiers": [
+        "public"
+      ],
+      "extends": null,
+      "implements": [],
+      "methods": [
+        {
+          "name": "createUser",
+          "return_type": "User",
+          "parameters": [
+            {
+              "name": "user",
+              "type": "User"
+            }
+          ],
+          "annotations": [],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "findById",
+          "return_type": "Optional",
+          "parameters": [
+            {
+              "name": "id",
+              "type": "Long"
+            }
+          ],
+          "annotations": [],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "findByEmail",
+          "return_type": "Optional",
+          "parameters": [
+            {
+              "name": "email",
+              "type": "String"
+            }
+          ],
+          "annotations": [],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "findAll",
+          "return_type": "List",
+          "parameters": [],
+          "annotations": [],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "findAdults",
+          "return_type": "List",
+          "parameters": [],
+          "annotations": [],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "updateUser",
+          "return_type": "User",
+          "parameters": [
+            {
+              "name": "id",
+              "type": "Long"
+            },
+            {
+              "name": "userDetails",
+              "type": "User"
+            }
+          ],
+          "annotations": [],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "deleteUser",
+          "return_type": "void",
+          "parameters": [
+            {
+              "name": "id",
+              "type": "Long"
+            }
+          ],
+          "annotations": [],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "searchByName",
+          "return_type": "List",
+          "parameters": [
+            {
+              "name": "name",
+              "type": "String"
+            }
+          ],
+          "annotations": [],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        }
+      ],
+      "fields": [
+        {
+          "name": "userRepository",
+          "type": "UserRepository",
+          "annotations": [
+            "Autowired"
+          ],
+          "modifiers": [
+            "private"
+          ],
+          "is_static": false
+        }
+      ],
+      "is_interface": false,
+      "is_enum": false,
+      "is_abstract": false,
+      "dependencies": [
+        "com.demo.entity.User",
+        "com.demo.repository.UserRepository",
+        "org.springframework.beans.factory.annotation.Autowired",
+        "org.springframework.stereotype.Service",
+        "java.util.List",
+        "java.util.Optional"
+      ],
+      "file_path": "src\\main\\java\\com\\demo\\service\\UserService.java"
+    }
+  ],
+  "packages": [
+    "com.demo.repository",
+    "com.demo.entity",
+    "com.demo",
+    "com.demo.controller",
+    "com.demo.service"
+  ],
+  "dependencies": [
+    "org.springframework.data.repository.query.Param",
+    "org.springframework.boot.autoconfigure.SpringBootApplication",
+    "org.springframework.data.jpa.repository.JpaRepository",
+    "java.util.List",
+    "com.demo.service.UserService",
+    "com.demo.entity.User",
+    "java.util.Optional",
+    "javax.persistence",
+    "org.springframework.http.HttpStatus",
+    "org.springframework.beans.factory.annotation.Autowired",
+    "org.springframework.data.jpa.repository.Query",
+    "org.springframework.stereotype.Repository",
+    "org.springframework.http.ResponseEntity",
+    "org.springframework.stereotype.Service",
+    "org.springframework.boot.SpringApplication",
+    "com.demo.repository.UserRepository",
+    "org.springframework.web.bind.annotation"
+  ],
+  "spring_components": [
+    {
+      "name": "DemoApplication",
+      "package": "com.demo",
+      "full_name": "com.demo.DemoApplication",
+      "annotations": [
+        "SpringBootApplication"
+      ],
+      "modifiers": [
+        "public"
+      ],
+      "extends": null,
+      "implements": [],
+      "methods": [
+        {
+          "name": "main",
+          "return_type": "void",
+          "parameters": [
+            {
+              "name": "args",
+              "type": "String"
+            }
+          ],
+          "annotations": [],
+          "modifiers": [
+            "public",
+            "static"
+          ],
+          "is_static": true,
+          "is_constructor": false,
+          "exceptions": []
+        }
+      ],
+      "fields": [],
+      "is_interface": false,
+      "is_enum": false,
+      "is_abstract": false,
+      "dependencies": [
+        "org.springframework.boot.SpringApplication",
+        "org.springframework.boot.autoconfigure.SpringBootApplication"
+      ],
+      "file_path": "src\\main\\java\\com\\demo\\DemoApplication.java"
+    },
+    {
+      "name": "UserController",
+      "package": "com.demo.controller",
+      "full_name": "com.demo.controller.UserController",
+      "annotations": [
+        "RestController",
+        "RequestMapping"
+      ],
+      "modifiers": [
+        "public"
+      ],
+      "extends": null,
+      "implements": [],
+      "methods": [
+        {
+          "name": "createUser",
+          "return_type": "ResponseEntity",
+          "parameters": [
+            {
+              "name": "user",
+              "type": "User"
+            }
+          ],
+          "annotations": [
+            "PostMapping"
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "getUserById",
+          "return_type": "ResponseEntity",
+          "parameters": [
+            {
+              "name": "id",
+              "type": "Long"
+            }
+          ],
+          "annotations": [
+            "GetMapping"
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "getAllUsers",
+          "return_type": "ResponseEntity",
+          "parameters": [],
+          "annotations": [
+            "GetMapping"
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "getAdults",
+          "return_type": "ResponseEntity",
+          "parameters": [],
+          "annotations": [
+            "GetMapping"
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "searchUsers",
+          "return_type": "ResponseEntity",
+          "parameters": [
+            {
+              "name": "name",
+              "type": "String"
+            }
+          ],
+          "annotations": [
+            "GetMapping"
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "updateUser",
+          "return_type": "ResponseEntity",
+          "parameters": [
+            {
+              "name": "id",
+              "type": "Long"
+            },
+            {
+              "name": "userDetails",
+              "type": "User"
+            }
+          ],
+          "annotations": [
+            "PutMapping"
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "deleteUser",
+          "return_type": "ResponseEntity",
+          "parameters": [
+            {
+              "name": "id",
+              "type": "Long"
+            }
+          ],
+          "annotations": [
+            "DeleteMapping"
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        }
+      ],
+      "fields": [
+        {
+          "name": "userService",
+          "type": "UserService",
+          "annotations": [
+            "Autowired"
+          ],
+          "modifiers": [
+            "private"
+          ],
+          "is_static": false
+        }
+      ],
+      "is_interface": false,
+      "is_enum": false,
+      "is_abstract": false,
+      "dependencies": [
+        "com.demo.entity.User",
+        "com.demo.service.UserService",
+        "org.springframework.beans.factory.annotation.Autowired",
+        "org.springframework.http.HttpStatus",
+        "org.springframework.http.ResponseEntity",
+        "org.springframework.web.bind.annotation",
+        "java.util.List",
+        "java.util.Optional"
+      ],
+      "file_path": "src\\main\\java\\com\\demo\\controller\\UserController.java"
+    },
+    {
+      "name": "UserService",
+      "package": "com.demo.service",
+      "full_name": "com.demo.service.UserService",
+      "annotations": [
+        "Service"
+      ],
+      "modifiers": [
+        "public"
+      ],
+      "extends": null,
+      "implements": [],
+      "methods": [
+        {
+          "name": "createUser",
+          "return_type": "User",
+          "parameters": [
+            {
+              "name": "user",
+              "type": "User"
+            }
+          ],
+          "annotations": [],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "findById",
+          "return_type": "Optional",
+          "parameters": [
+            {
+              "name": "id",
+              "type": "Long"
+            }
+          ],
+          "annotations": [],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "findByEmail",
+          "return_type": "Optional",
+          "parameters": [
+            {
+              "name": "email",
+              "type": "String"
+            }
+          ],
+          "annotations": [],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "findAll",
+          "return_type": "List",
+          "parameters": [],
+          "annotations": [],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "findAdults",
+          "return_type": "List",
+          "parameters": [],
+          "annotations": [],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "updateUser",
+          "return_type": "User",
+          "parameters": [
+            {
+              "name": "id",
+              "type": "Long"
+            },
+            {
+              "name": "userDetails",
+              "type": "User"
+            }
+          ],
+          "annotations": [],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "deleteUser",
+          "return_type": "void",
+          "parameters": [
+            {
+              "name": "id",
+              "type": "Long"
+            }
+          ],
+          "annotations": [],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "searchByName",
+          "return_type": "List",
+          "parameters": [
+            {
+              "name": "name",
+              "type": "String"
+            }
+          ],
+          "annotations": [],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        }
+      ],
+      "fields": [
+        {
+          "name": "userRepository",
+          "type": "UserRepository",
+          "annotations": [
+            "Autowired"
+          ],
+          "modifiers": [
+            "private"
+          ],
+          "is_static": false
+        }
+      ],
+      "is_interface": false,
+      "is_enum": false,
+      "is_abstract": false,
+      "dependencies": [
+        "com.demo.entity.User",
+        "com.demo.repository.UserRepository",
+        "org.springframework.beans.factory.annotation.Autowired",
+        "org.springframework.stereotype.Service",
+        "java.util.List",
+        "java.util.Optional"
+      ],
+      "file_path": "src\\main\\java\\com\\demo\\service\\UserService.java"
+    }
+  ],
+  "test_candidates": [
+    {
+      "name": "DemoApplication",
+      "package": "com.demo",
+      "full_name": "com.demo.DemoApplication",
+      "annotations": [
+        "SpringBootApplication"
+      ],
+      "modifiers": [
+        "public"
+      ],
+      "extends": null,
+      "implements": [],
+      "methods": [
+        {
+          "name": "main",
+          "return_type": "void",
+          "parameters": [
+            {
+              "name": "args",
+              "type": "String"
+            }
+          ],
+          "annotations": [],
+          "modifiers": [
+            "public",
+            "static"
+          ],
+          "is_static": true,
+          "is_constructor": false,
+          "exceptions": []
+        }
+      ],
+      "fields": [],
+      "is_interface": false,
+      "is_enum": false,
+      "is_abstract": false,
+      "dependencies": [
+        "org.springframework.boot.SpringApplication",
+        "org.springframework.boot.autoconfigure.SpringBootApplication"
+      ],
+      "file_path": "src\\main\\java\\com\\demo\\DemoApplication.java"
+    },
+    {
+      "name": "UserController",
+      "package": "com.demo.controller",
+      "full_name": "com.demo.controller.UserController",
+      "annotations": [
+        "RestController",
+        "RequestMapping"
+      ],
+      "modifiers": [
+        "public"
+      ],
+      "extends": null,
+      "implements": [],
+      "methods": [
+        {
+          "name": "createUser",
+          "return_type": "ResponseEntity",
+          "parameters": [
+            {
+              "name": "user",
+              "type": "User"
+            }
+          ],
+          "annotations": [
+            "PostMapping"
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "getUserById",
+          "return_type": "ResponseEntity",
+          "parameters": [
+            {
+              "name": "id",
+              "type": "Long"
+            }
+          ],
+          "annotations": [
+            "GetMapping"
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "getAllUsers",
+          "return_type": "ResponseEntity",
+          "parameters": [],
+          "annotations": [
+            "GetMapping"
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "getAdults",
+          "return_type": "ResponseEntity",
+          "parameters": [],
+          "annotations": [
+            "GetMapping"
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "searchUsers",
+          "return_type": "ResponseEntity",
+          "parameters": [
+            {
+              "name": "name",
+              "type": "String"
+            }
+          ],
+          "annotations": [
+            "GetMapping"
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "updateUser",
+          "return_type": "ResponseEntity",
+          "parameters": [
+            {
+              "name": "id",
+              "type": "Long"
+            },
+            {
+              "name": "userDetails",
+              "type": "User"
+            }
+          ],
+          "annotations": [
+            "PutMapping"
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "deleteUser",
+          "return_type": "ResponseEntity",
+          "parameters": [
+            {
+              "name": "id",
+              "type": "Long"
+            }
+          ],
+          "annotations": [
+            "DeleteMapping"
+          ],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        }
+      ],
+      "fields": [
+        {
+          "name": "userService",
+          "type": "UserService",
+          "annotations": [
+            "Autowired"
+          ],
+          "modifiers": [
+            "private"
+          ],
+          "is_static": false
+        }
+      ],
+      "is_interface": false,
+      "is_enum": false,
+      "is_abstract": false,
+      "dependencies": [
+        "com.demo.entity.User",
+        "com.demo.service.UserService",
+        "org.springframework.beans.factory.annotation.Autowired",
+        "org.springframework.http.HttpStatus",
+        "org.springframework.http.ResponseEntity",
+        "org.springframework.web.bind.annotation",
+        "java.util.List",
+        "java.util.Optional"
+      ],
+      "file_path": "src\\main\\java\\com\\demo\\controller\\UserController.java"
+    },
+    {
+      "name": "UserService",
+      "package": "com.demo.service",
+      "full_name": "com.demo.service.UserService",
+      "annotations": [
+        "Service"
+      ],
+      "modifiers": [
+        "public"
+      ],
+      "extends": null,
+      "implements": [],
+      "methods": [
+        {
+          "name": "createUser",
+          "return_type": "User",
+          "parameters": [
+            {
+              "name": "user",
+              "type": "User"
+            }
+          ],
+          "annotations": [],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "findById",
+          "return_type": "Optional",
+          "parameters": [
+            {
+              "name": "id",
+              "type": "Long"
+            }
+          ],
+          "annotations": [],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "findByEmail",
+          "return_type": "Optional",
+          "parameters": [
+            {
+              "name": "email",
+              "type": "String"
+            }
+          ],
+          "annotations": [],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "findAll",
+          "return_type": "List",
+          "parameters": [],
+          "annotations": [],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "findAdults",
+          "return_type": "List",
+          "parameters": [],
+          "annotations": [],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "updateUser",
+          "return_type": "User",
+          "parameters": [
+            {
+              "name": "id",
+              "type": "Long"
+            },
+            {
+              "name": "userDetails",
+              "type": "User"
+            }
+          ],
+          "annotations": [],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "deleteUser",
+          "return_type": "void",
+          "parameters": [
+            {
+              "name": "id",
+              "type": "Long"
+            }
+          ],
+          "annotations": [],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        },
+        {
+          "name": "searchByName",
+          "return_type": "List",
+          "parameters": [
+            {
+              "name": "name",
+              "type": "String"
+            }
+          ],
+          "annotations": [],
+          "modifiers": [
+            "public"
+          ],
+          "is_static": false,
+          "is_constructor": false,
+          "exceptions": []
+        }
+      ],
+      "fields": [
+        {
+          "name": "userRepository",
+          "type": "UserRepository",
+          "annotations": [
+            "Autowired"
+          ],
+          "modifiers": [
+            "private"
+          ],
+          "is_static": false
+        }
+      ],
+      "is_interface": false,
+      "is_enum": false,
+      "is_abstract": false,
+      "dependencies": [
+        "com.demo.entity.User",
+        "com.demo.repository.UserRepository",
+        "org.springframework.beans.factory.annotation.Autowired",
+        "org.springframework.stereotype.Service",
+        "java.util.List",
+        "java.util.Optional"
+      ],
+      "file_path": "src\\main\\java\\com\\demo\\service\\UserService.java"
+    }
+  ]
+}
